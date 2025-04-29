@@ -88,6 +88,6 @@ If you are interested for more information, check out the [full paper](https://a
 }
 ```
 
-If you have any questions, you can open a [GitHub Issue](https://github.com/Masonshipton25/URIELPlus/issues) or send them an [email](mailto:masonshipton25@gmail.com).
+If you have any questions, you can open a [GitHub Issue](https://github.com/Lee-Language-Lab/URIELPlus/issues) or send them an [email](mailto:masonshipton25@gmail.com).
 
 Check out ExploRIEL, the online UI for URIEL+: https://uriel-leelab.streamlit.app/ 
