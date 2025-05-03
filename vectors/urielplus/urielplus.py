@@ -385,9 +385,6 @@ class URIELPlus(URIELPlusDatabases, URIELPlusImputation, URIELPlusQuerying):
         """
         files_to_copy = ["family_features.npz",
                          "features.npz", "geocoord_features.npz"]
-        cont = self.query_yes_no(f"Resetting to URIEL involves copying the files {files_to_copy} into the data directory. Any files with the same name will be replaced. Continue?")
-        if not cont:
-            return
         for file in files_to_copy:
             from_file_path = os.path.join(self.cur_dir, "database", "original_uriel", file)
             to_file_path = os.path.join(self.cur_dir, "database", file)
