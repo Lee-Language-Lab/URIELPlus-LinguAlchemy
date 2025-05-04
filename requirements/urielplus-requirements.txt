@@ -1,0 +1,10 @@
+numpy>=1.26.1
+tensorflow>=2.11.1
+tensorflow-addons>=0.19
+scikit-learn>=1.5.1
+scipy>=1.14.1
+pandas>=2.2.2
+contexttimer>=0.3.3
+fancyimpute>=0.7.0
+joblib>=1.4.2
+setuptools>=68.2.0
