@@ -7,6 +7,13 @@ By [Mason Shipton](https://github.com/Masonshipton25), [David Anugraha](https://
 - [About LinguAlchemy](#about-lingualchemy)
 - [About URIEL+](#about-uriel)
 - [Environment](#environment)
+- [Running LinguAlchemy Method](#running-lingualchemy-method)
+  - [1. Vector Creation](#1-vector-creation)
+  - [2. Running Experiments](#2-running-experiments)
+
+  Optional
+
+  - [3. Determining Statistical Significance](#3-determining-statistical-significance)
 
 ## About LinguAlchemy
 
@@ -99,3 +106,31 @@ Check out ExploRIEL, the online UI for URIEL+: https://uriel-leelab.streamlit.ap
 Requires **Python 3.10** or later.
 
 All dependencies are listed in the `requirements/` folder.
+
+## Running LinguAlchemy Method
+
+### 1. Vector Creation
+
+Run the following script to create URIEL+ vectors:
+
+```bash
+python vectors/create_vectors.py
+```
+
+This will create PyTorch files containing distances for the **MASAKHANEWS**, **MASSIVE**, and **SEMREL** language datasets.
+
+> Output files will be saved to the `vectors/` folder in the individual folders for each dataset (e.g., MASAKHANEWS PyTorch files will be saved to `vectors/masakhanews_vectors` folder).
+
+---
+
+### 2. Running Experiments
+
+TBD
+
+### Optional
+
+### 3. Determining Statistical Significance
+
+You can test statistical significance between URIEL, URIEL+, or different URIEL versions.
+
+TBD
