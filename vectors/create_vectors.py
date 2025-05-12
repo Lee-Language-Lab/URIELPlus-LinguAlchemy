@@ -85,13 +85,13 @@ u.integrate_databases()
 
 # Geo vectors
 update_dataset_with_vectors(dataset_filename="geo.pt", vector_type="geographic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                             languages=MASAKHANEWS_LANGS)
 update_dataset_with_vectors(dataset_filename="geo.pt", vector_type="geographic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                             languages=MASSIVE_LANGS)
 update_dataset_with_vectors(dataset_filename="geo.pt", vector_type="geographic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                             languages=SEMREL_LANGS)
 
 # Syntax average vectors
@@ -99,26 +99,26 @@ u.set_aggregation('A')
 u.softimpute_imputation()
 
 update_dataset_with_vectors(dataset_filename="syntax_average.pt", vector_type="syntactic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                             languages=MASAKHANEWS_LANGS)
 update_dataset_with_vectors(dataset_filename="syntax_average.pt", vector_type="syntactic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                             languages=MASSIVE_LANGS)
 update_dataset_with_vectors(dataset_filename="syntax_average.pt", vector_type="syntactic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                             languages=SEMREL_LANGS)
 
 # Syntax average geo vectors
 create_concatenated_vector(first_dataset_filename="syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                            languages=MASAKHANEWS_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                            languages=MASSIVE_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                            languages=SEMREL_LANGS)
 
 # Syntax KNN vectors
@@ -129,50 +129,50 @@ u.set_aggregation('U')
 u.softimpute_imputation()
 
 update_dataset_with_vectors(dataset_filename="syntax_knn.pt", vector_type="syntactic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                             languages=MASAKHANEWS_LANGS)
 update_dataset_with_vectors(dataset_filename="syntax_knn.pt", vector_type="syntactic", 
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                             languages=MASSIVE_LANGS)
 update_dataset_with_vectors(dataset_filename="syntax_knn.pt", vector_type="syntactic",
-                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                            experiment_dir=os.path.join(EXPERIMENT_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                             languages=SEMREL_LANGS)
 
 # Syntax KNN geo vectors
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                            languages=MASAKHANEWS_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                            languages=MASSIVE_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                            languages=SEMREL_LANGS)
 
 # Syntax KNN syntax average vectors
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="syntax_average.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                            languages=MASAKHANEWS_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="syntax_average.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                            languages=MASSIVE_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn.pt", second_dataset_filename="syntax_average.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                            languages=SEMREL_LANGS)
 
 # Syntax KNN syntax average geo vectors
 create_concatenated_vector(first_dataset_filename="syntax_knn_syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "masakhanews_vectors"), output_dir=os.path.join(BASE_DIR, "masakhanews_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "masakhanews"), output_dir=os.path.join(BASE_DIR, "masakhanews"),
                            languages=MASAKHANEWS_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn_syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "massive_vectors"), output_dir=os.path.join(BASE_DIR, "massive_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "massive"), output_dir=os.path.join(BASE_DIR, "massive"),
                            languages=MASSIVE_LANGS)
 
 create_concatenated_vector(first_dataset_filename="syntax_knn_syntax_average.pt", second_dataset_filename="geo.pt", 
-                           experiment_dir=os.path.join(BASE_DIR, "semrel_vectors"), output_dir=os.path.join(BASE_DIR, "semrel_vectors"),
+                           experiment_dir=os.path.join(BASE_DIR, "semrel"), output_dir=os.path.join(BASE_DIR, "semrel"),
                            languages=SEMREL_LANGS)

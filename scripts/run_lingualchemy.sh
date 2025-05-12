@@ -13,7 +13,7 @@ for MODEL_NAME in bert-base-multilingual-cased xlm-roberta-base;
 do
     for VECTOR in geo.pt syntax_average_geo.pt syntax_average.pt syntax_knn_geo.pt syntax_knn_syntax_average_geo.pt syntax_knn_syntax_average.pt syntax_knn.pt;
     do
-        for DATASET in masakhanews_vectors massive_vectors semrel_vectors;
+        for DATASET in masakhanews massive semrel;
         do
             CUDA_VISIBLE_DEVICES=0,1 python3 -m src.main \
                 --model_name ${MODEL_NAME} --epochs ${EPOCHES}  \
