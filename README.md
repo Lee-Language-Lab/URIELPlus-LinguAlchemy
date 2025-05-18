@@ -119,13 +119,23 @@ python vectors/create_vectors.py
 
 This will create PyTorch files containing distances for the **MASAKHANEWS**, **MASSIVE**, and **SEMREL** language datasets.
 
-> Output files will be saved to the `vectors/` folder in the individual folders for each dataset (e.g., MASAKHANEWS PyTorch files will be saved to `vectors/masakhanews_vectors` folder).
+> Output files will be saved to the `vectors/` folder in the individual folders for each dataset (e.g., MASAKHANEWS PyTorch files will be saved to `vectors/masakhanews` folder).
 
 ---
 
 ### 2. Running Experiments
 
-TBD
+After creating vectors, run:
+
+```bash
+./script/run_lingualchemy.sh
+```
+
+This will run all experiments for the **MASAKHANEWS**, **MASSIVE**, and **SEMREL** language datasets.
+
+> Output files will be saved to the `output/` folder in the individual folders for each dataset (e.g., MASAKHANEWS experiment results will be saved to `output/masakhanews` folder).
+
+---
 
 ### Optional
 
