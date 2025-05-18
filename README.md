@@ -153,4 +153,12 @@ This will average the `accuracy` for **MASAKHANEWS** and **MASSIVE** datasets an
 
 You can test statistical significance between URIEL, URIEL+, or different URIEL versions.
 
-TBD
+**Steps:**
+
+1. Copy the metrics (`accuracy` or `pearson`) into `statistical.py` under the correct experiment section.
+
+2. Run:
+   ```bash
+   python statistical.py
+   ```
+   > This will output the **p-value** measuring the statistical significance between the different URIEL results.
