@@ -133,7 +133,17 @@ After creating vectors, run:
 
 This will run all experiments for the **MASAKHANEWS**, **MASSIVE**, and **SEMREL** language datasets.
 
-> Output files will be saved to the `output/` folder in the individual folders for each dataset (e.g., MASAKHANEWS experiment results will be saved to `output/masakhanews` folder).
+> Output files will be saved to the `outputs/` folder in the individual folders for each dataset (e.g., MASAKHANEWS experiment results will be saved to `outputs/masakhanews` folder).
+
+After the experiments finish, run:
+
+```bash
+python metrics.py
+```
+
+This will average the `accuracy` for **MASAKHANEWS** and **MASSIVE** datasets and the `pearson` correlation for **SEMREL** dataset across all languages under different benchmarks.
+
+> Table of metrics will be saved to the `outputs/` folder as `metrics_table.csv`.
 
 ---
 
